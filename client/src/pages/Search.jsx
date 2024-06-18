@@ -1,6 +1,16 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { MdLocationOn } from 'react-icons/md';
+
+import h2 from '../images/h2.avif';
+import h3 from '../images/h3.avif';
+import h4 from '../images/h4.avif';
+import h5 from '../images/h5.avif';
+import h6 from '../images/h6.avif';
+import h7 from '../images/h7.avif';
 import ListingItem from '../components/ListingItem';
+import h1 from '../images/h1.webp';
 
 export default function Search() {
   const navigate = useNavigate();
@@ -234,29 +244,216 @@ export default function Search() {
           Listing results:
         </h1>
         <div className='p-7 flex flex-wrap gap-4'>
-          {!loading && listings.length === 0 && (
-            <p className='text-xl text-slate-700'>No listing found!</p>
-          )}
-          {loading && (
-            <p className='text-xl text-slate-700 text-center w-full'>
-              Loading...
-            </p>
-          )}
+          <div className='bg-white shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg w-full sm:w-[330px]'>
+            <Link>
+              <img
+                src={h1}
+                alt='listing cover'
+                className='h-[320px] sm:h-[220px] w-full object-cover hover:scale-105 transition-scale duration-300'
+              />
+              <div className='p-3 flex flex-col gap-2 w-full'>
+                <p className='truncate text-lg font-semibold text-slate-700'>
+                  Modern house interior
+                </p>
+                <div className='flex items-center gap-1'>
+                  <MdLocationOn className='h-4 w-4 text-green-700' />
+                  <p className='text-sm text-gray-600 truncate w-full'>
+                    İstanbul, Turkey
+                  </p>
+                </div>
+                <p className='text-sm text-gray-600 line-clamp-2'>
+                  Interior of classic contemporary style, leather sofa set
+                </p>
+                <p className='text-slate-500 mt-2 font-semibold '>
+                  $330/Month
+                </p>
+                <div className='text-slate-700 flex gap-4'>
+                  <div className='font-bold text-xs'>
+                    6bets
+                  </div>
+                  <div className='font-bold text-xs'>
+                    5 baths
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
 
-          {!loading &&
-            listings &&
-            listings.map((listing) => (
-              <ListingItem key={listing._id} listing={listing} />
-            ))}
+          <div className='bg-white shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg w-full sm:w-[330px]'>
+            <Link>
+              <img
+                src={h7}
+                alt='listing cover'
+                className='h-[320px] sm:h-[220px] w-full object-cover hover:scale-105 transition-scale duration-300'
+              />
+              <div className='p-3 flex flex-col gap-2 w-full'>
+                <p className='truncate text-lg font-semibold text-slate-700'>
+                  Modern living room
+                </p>
+                <div className='flex items-center gap-1'>
+                  <MdLocationOn className='h-4 w-4 text-green-700' />
+                  <p className='text-sm text-gray-600 truncate w-full'>
+                    Mercer Island, WA, USA
+                  </p>
+                </div>
+                <p className='text-sm text-gray-600 line-clamp-2'>
 
-          {showMore && (
-            <button
-              onClick={onShowMoreClick}
-              className='text-green-700 hover:underline p-7 text-center w-full'
-            >
-              Show more
-            </button>
-          )}
+                  February 17, 2021, Architecture & Interiors, Interiors
+                </p>
+                <p className='text-slate-500 mt-2 font-semibold '>
+                  $750/Month
+                </p>
+                <div className='text-slate-700 flex gap-4'>
+                  <div className='font-bold text-xs'>
+                    6 Bets
+                  </div>
+                  <div className='font-bold text-xs'>
+                    5 Baths
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className='bg-white shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg w-full sm:w-[330px]'>
+            <Link>
+              <img
+                src={h3}
+                alt='listing cover'
+                className='h-[320px] sm:h-[220px] w-full object-cover hover:scale-105 transition-scale duration-300'
+              />
+              <div className='p-3 flex flex-col gap-2 w-full'>
+                <p className='truncate text-lg font-semibold text-slate-700'>
+                  Green room
+                </p>
+                <div className='flex items-center gap-1'>
+                  <MdLocationOn className='h-4 w-4 text-green-700' />
+                  <p className='text-sm text-gray-600 truncate w-full'>
+                    Kuala Lumpur, Federal Territory of Kuala Lumpur, M
+                  </p>
+                </div>
+                <p className='text-sm text-gray-600 line-clamp-2'>
+                  The famous sky pool in Kuala Lumpur with a stunning view of the skyline
+                </p>
+                <p className='text-slate-500 mt-2 font-semibold '>
+                  $200/Month
+                </p>
+                <div className='text-slate-700 flex gap-4'>
+                  <div className='font-bold text-xs'>
+                    3bets
+                  </div>
+                  <div className='font-bold text-xs'>
+                    2baths
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className='bg-white shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg w-full sm:w-[330px]'>
+            <Link>
+              <img
+                src={h6}
+                alt='listing cover'
+                className='h-[320px] sm:h-[220px] w-full object-cover hover:scale-105 transition-scale duration-300'
+              />
+              <div className='p-3 flex flex-col gap-2 w-full'>
+                <p className='truncate text-lg font-semibold text-slate-700'>
+                  iving room
+                </p>
+                <div className='flex items-center gap-1'>
+                  <MdLocationOn className='h-4 w-4 text-green-700' />
+                  <p className='text-sm text-gray-600 truncate w-full'>
+                    London, UK
+                  </p>
+                </div>
+                <p className='text-sm text-gray-600 line-clamp-2'>
+                  Interior design series
+                </p>
+                <p className='text-slate-500 mt-2 font-semibold '>
+                  $300/Month
+                </p>
+                <div className='text-slate-700 flex gap-4'>
+                  <div className='font-bold text-xs'>
+                    6bets
+                  </div>
+                  <div className='font-bold text-xs'>
+                    5 baths
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className='bg-white shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg w-full sm:w-[330px]'>
+            <Link>
+              <img
+                src={h4}
+                alt='listing cover'
+                className='h-[320px] sm:h-[220px] w-full object-cover hover:scale-105 transition-scale duration-300'
+              />
+              <div className='p-3 flex flex-col gap-2 w-full'>
+                <p className='truncate text-lg font-semibold text-slate-700'>
+                  Luxurious Villa
+                </p>
+                <div className='flex items-center gap-1'>
+                  <MdLocationOn className='h-4 w-4 text-green-700' />
+                  <p className='text-sm text-gray-600 truncate w-full'>
+                    The ninteen th floor
+                  </p>
+                </div>
+                <p className='text-sm text-gray-600 line-clamp-2'>
+                  Modern Luxurious Villa with palms garden.
+                </p>
+                <p className='text-slate-500 mt-2 font-semibold '>
+                  $400/Month
+                </p>
+                <div className='text-slate-700 flex gap-4'>
+                  <div className='font-bold text-xs'>
+                    6bets
+                  </div>
+                  <div className='font-bold text-xs'>
+                    4 baths
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className='bg-white shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg w-full sm:w-[330px]'>
+            <Link>
+              <img
+                src={h5}
+                alt='listing cover'
+                className='h-[320px] sm:h-[220px] w-full object-cover hover:scale-105 transition-scale duration-300'
+              />
+              <div className='p-3 flex flex-col gap-2 w-full'>
+                <p className='truncate text-lg font-semibold text-slate-700'>
+                  Lounge-Area and Cityscape
+                </p>
+                <div className='flex items-center gap-1'>
+                  <MdLocationOn className='h-4 w-4 text-green-700' />
+                  <p className='text-sm text-gray-600 truncate w-full'>
+                    Hanoi, Vietnam
+                  </p>
+                </div>
+                <p className='text-sm text-gray-600 line-clamp-2'>
+                  Interior of reception co sharing office cafe area lot in day time
+                </p>
+                <p className='text-slate-500 mt-2 font-semibold '>
+                  $600/Month
+                </p>
+                <div className='text-slate-700 flex gap-4'>
+                  <div className='font-bold text-xs'>
+                    6bets
+                  </div>
+                  <div className='font-bold text-xs'>
+                    5 baths
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
